@@ -1,0 +1,11 @@
+{
+  "name": "katuma",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/coopdevs/katuma-web"
+  },
+  "dependencies": {
+    "http-proxy": "1.1.2"
+  }
+}
