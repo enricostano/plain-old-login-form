@@ -10,37 +10,16 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
 
-    <script src="jquery-2.1.1.js"></script>
-    <script src="login.js"></script>
-
+    <script src="lib/jquery-2.1.1.js"></script>
+    <script src="lib/underscore.js"></script>
+    <script src="lib/backbone.js"></script>
+    <script src="app.js"></script>
     <link rel="stylesheet" type="text/css" href="main.css">
   </head>
   <body>
-  <div id="message"></div>
-  <h2>Log in</h2>
-  <form id="html-form" action="api/v1/sessions" method="post">
-    <label for="email">email</label>
-    <input id="email" name="email" type="text" size="40" value="" maxlength="50" />
-    <label for="password">password</label>
-    <input id="password" name="password" type="password" size="40" value="" maxlength="50" />
-    <input id="submit" type="submit" value="Log in" class="button" />
-  </form>
-  <h2>Sign up</h2>
-  <form id="signup-form" action="api/v1/users" method="post">
-    <label for="name">name</label>
-    <input id="name" name="name" type="text" size="40" value="" maxlength="50" />
-    <label for="email">email</label>
-    <input id="email" name="email" type="text" size="40" value="" maxlength="50" />
-    <label for="password">password</label>
-    <input id="password" name="password" type="password" size="40" value="" maxlength="50" />
-    <label for="password_confirmation">password confirmation</label>
-    <input id="password_confirmation" name="password_confirmation" type="password" size="40" value="" maxlength="50" />
-    <input id="submit" type="submit" value="Sign up" class="button" />
-  </form>
-  <h2>Log out</h2>
-  <form id="logout-form" action="api/v1/sessions" method="delete">
-    <input id="submit" type="submit" value="Log out" class="button" />
-  </form>
+    <div id="login"></div>
+    <div id="signup"></div>
+    <div id="logout"></div>
     <!--[if lt IE 7]>
     <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
     <![endif]-->
