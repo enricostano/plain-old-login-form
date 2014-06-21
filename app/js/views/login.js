@@ -2,11 +2,12 @@
 
 var $ = require("jquery")
   , Backbone = require("backbone")
-  , loginTemplate = require("../../templates/login.handlebars");
+  , Marionette = require("backbone.marionette")
+  , loginLayout;
 
-module.exports = Backbone.View.extend({
-  el: "#login"
-, template: loginTemplate()
+loginLayout = {
+  template: require("../../templates/login.handlebars")
+, className: "js-login-page"
 , render: function() {
     this.$el.html(this.template);
   }
@@ -31,4 +32,6 @@ module.exports = Backbone.View.extend({
     event.preventDefault();
     $.ajax(options);
   }
-});
+};
+
+module.exports = Backbone.Marionette.Layout.extend(loginLayout);

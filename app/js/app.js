@@ -7,7 +7,10 @@ require("imports?jQuery=jquery!../../lib/bootstrap-3.1.1-dist/js/bootstrap.js");
 var Backbone = require("backbone")
   , Marionette = require("backbone.marionette")
   , headerLayout = require("./layouts/header.js")
-  , Katuma = new Marionette.Application({});
+  , routerKatuma = require("./router.js")
+  , controllerKatuma = require("./controller.js");
+
+window.Katuma = new Marionette.Application({});
 
 Katuma.rootRoute = "/";
 
@@ -17,7 +20,12 @@ Katuma.addRegions({
 });
 
 Katuma.addInitializer(function(options) {
-  Katuma.navRegion.show(new headerLayout);
+  var router;
+
+  Katuma.navRegion.show(new headerLayout());
+  router = new routerKatuma({
+    controller: new controllerKatuma()
+  });
 });
 
 Katuma.on("initialize:after", function(){
