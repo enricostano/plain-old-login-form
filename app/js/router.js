@@ -7,6 +7,7 @@ var Backbone = require("backbone")
 Router = {
   appRoutes: {
     "login": "login"
+  , "dashboard": "dashboard"
   //, "signup": "signup"
   //, "logout": "logout"
   }

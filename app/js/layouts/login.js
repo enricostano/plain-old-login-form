@@ -8,9 +8,6 @@ var $ = require("jquery")
 loginLayout = {
   template: require("../../templates/login.handlebars")
 , className: "js-login-page"
-, render: function() {
-    this.$el.html(this.template);
-  }
 , events: {
     "click #loginSubmit": "loginSubmit"
   }
@@ -19,13 +16,11 @@ loginLayout = {
       type: "POST"
     , url: this.$("#login-form").attr("action")
     , data: this.$("#login-form").serialize()
-    , dataType: "json"
     , success: function(json, status, xhr) {
-        console.log(json);
-        alert("Status is: " + status);
+        document.location.hash = '#/dashboard';
       }
     , error: function(xhr, status, error) {
-        console.log("Status is: " + status);
+        console.log("[Failure] Status is: " + status);
       }
     };
 
