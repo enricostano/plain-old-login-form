@@ -8,8 +8,8 @@ Router = {
   appRoutes: {
     "login": "login"
   , "dashboard": "dashboard"
-  //, "signup": "signup"
-  //, "logout": "logout"
+  , "signup": "signup"
+  , "logout": "logout"
   }
 };
 
